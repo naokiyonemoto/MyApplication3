@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">My app</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_name">名前</string>
+    <string name="text_number">番号</string>
+    <string name="text_mail">メールアドレス</string>
+    <string name="button_update">新しい連絡先を更新する</string>
+    <string name="text_company">会社名</string>
+    <string name="text_name_sub">ふりがな</string>
+    <string name="button_create">新しい連絡先を追加する</string>
+</resources>

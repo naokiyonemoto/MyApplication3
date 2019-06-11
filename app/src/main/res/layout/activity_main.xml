@@ -31,25 +31,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button_add"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/button_create" />
-
             <ListView
                 android:id="@+id/list_contact"
                 android:layout_width="match_parent"
-                android:layout_height="500dp">
+                android:layout_height="540dp">
 
             </ListView>
         </LinearLayout>
 
         <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bottomNav"
+            android:id="@+id/bottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
             app:menu="@menu/bottom_navigate_item" />
 
     </LinearLayout>

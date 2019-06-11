@@ -8,4 +8,7 @@
     <string name="text_company">会社名</string>
     <string name="text_name_sub">ふりがな</string>
     <string name="button_create">新しい連絡先を追加する</string>
+    <string name="bottom_nav_add">add</string>
+    <string name="bottom_nav_delete">delete</string>
+    <string name="bottom_nav_call">call</string>
 </resources>

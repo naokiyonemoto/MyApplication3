@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".addPerson"></activity>
-        <activity android:name=".updatePerson"></activity>
+        <activity android:name=".addPersonData"></activity>
+        <activity android:name=".updatePersonData"></activity>
     </application>
 
 </manifest>

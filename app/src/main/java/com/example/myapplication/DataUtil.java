@@ -10,14 +10,13 @@ import java.io.Serializable;
 
 public class DataUtil {
 
-    private final static String FILE_NAME = "updatePerson.obj";
+    private final static String FILE_NAME = "updatePersonData.obj";
 
     /*
     *データ保存
     * @param context
     * @param object 保存するオブジェクト
      */
-
     public static void save(Context context, Serializable object){
         try{
             ObjectOutputStream output = new ObjectOutputStream(context.openFileOutput(FILE_NAME, Context.MODE_PRIVATE));

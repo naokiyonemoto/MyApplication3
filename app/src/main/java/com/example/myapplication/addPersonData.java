@@ -3,13 +3,15 @@ package com.example.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 public class addPersonData extends AppCompatActivity {
 
-    private personData data;
     private EditText editName;
     private EditText editSubName;
     private EditText editPhoneNumber;
@@ -51,6 +53,13 @@ public class addPersonData extends AppCompatActivity {
     }
 
     private void save() {
+        //TODO：ファイルに保存したい
+        //１件入力した後、追加すると上書きされる？
+        //文字化けしてないか
+        personData data = new personData();
+
+        Log.d("EnterNameLog", editName.getText().toString());
+        Log.d("EnterSubNameLog", editSubName.getText().toString());
 
         data.setName(editName.getText().toString());
         data.setSubName(editSubName.getText().toString());
@@ -58,7 +67,11 @@ public class addPersonData extends AppCompatActivity {
         data.setEmail(editEmail.getText().toString());
         data.setCompany(editCompany.getText().toString());
 
+        Log.d("data.name",data.getName());
         DataUtil.save(addPersonData.this, data);
+
+        //TODO：登録しました的なダイアログを出したい
+        finish();
     }
 
 }

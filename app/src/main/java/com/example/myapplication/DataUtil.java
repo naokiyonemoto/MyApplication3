@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 public class DataUtil {
 
-    private final static String FILE_NAME = "updatePersonData.obj";
+    private final static String FILE_NAME = "persondata.txt";
 
     /*
     *データ保存
@@ -35,7 +35,6 @@ public class DataUtil {
     * @param context
     * @return 保存しているデータ　無い場合はNULL
      */
-
     public static Object load(Context context){
         Object returnObject = null;
         try{

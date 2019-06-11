@@ -23,13 +23,11 @@ public class updatePersonData extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_updata_person);
+
         //
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-
-//        Bundle bundle = getIntent().getExtras();
-//        personData data = (personData)bundle.getSerializable("DATA_MODEL");
 
         Intent intent = getIntent();
         String selectedName = intent.getStringExtra("name");
@@ -45,9 +43,7 @@ public class updatePersonData extends AppCompatActivity {
         editEmail = findViewById(R.id.edit_email);
         editCompany = findViewById(R.id.edit_company);
 
-//        editName.setText(data.getName());
-//        editSubName.setText(data.getSubName());
-//        editPhoneNumber.setText(data.getPhoneNumber());
+
 
         editName.setText(selectedName);
         editSubName.setText(selectedSubName);

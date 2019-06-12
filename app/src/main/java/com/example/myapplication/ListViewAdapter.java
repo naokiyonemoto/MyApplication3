@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class ListAdapter extends ArrayAdapter<personData> {
+public class ListViewAdapter extends ArrayAdapter<PersonData> {
 
-    public ListAdapter(Context context, int resource, List<personData> objects) {
+    public ListViewAdapter(Context context, int resource, List<PersonData> objects) {
         super(context, resource, objects);
     }
 
@@ -21,7 +21,7 @@ public class ListAdapter extends ArrayAdapter<personData> {
         if (convertView == null) {
             //初回起動,データが1度も表示されてない場合
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.layout_list_item, null);
+            convertView = inflater.inflate(R.layout.listview_layout, null);
             holder = new ViewHolder(convertView);
             convertView.setTag(holder);
         } else {
@@ -29,7 +29,7 @@ public class ListAdapter extends ArrayAdapter<personData> {
             holder = (ViewHolder) convertView.getTag();
 
         }
-        personData items = getItem(position);
+        PersonData items = getItem(position);
 
         holder.textName.setText(items.name);
         holder.textSubName.setText(items.subName);

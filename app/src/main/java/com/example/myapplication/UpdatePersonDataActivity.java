@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-public class updatePersonData extends AppCompatActivity {
+public class UpdatePersonDataActivity extends AppCompatActivity {
 
     //個別連絡先画面の内容,変更できたりする
-    private personData data;
+    private PersonData data;
     private EditText editName;
     private EditText editSubName;
     private EditText editPhoneNumber;
@@ -22,7 +22,7 @@ public class updatePersonData extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_updata_person);
+        setContentView(R.layout.activity_updata_persondata);
 
         //
         ActionBar actionBar = getSupportActionBar();
@@ -42,8 +42,6 @@ public class updatePersonData extends AppCompatActivity {
         editPhoneNumber = findViewById(R.id.edit_phone_number);
         editEmail = findViewById(R.id.edit_email);
         editCompany = findViewById(R.id.edit_company);
-
-
 
         editName.setText(selectedName);
         editSubName.setText(selectedSubName);

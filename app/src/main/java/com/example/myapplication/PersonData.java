@@ -2,17 +2,17 @@ package com.example.myapplication;
 
 import java.io.Serializable;
 
-public class personData implements Serializable {
+public class PersonData implements Serializable {
 
-    public String name;
-    public String subName;
-    public String phoneNumber;
-    public String email;
-    public String company;
+    private String name;
+    private String subName;
+    private String phoneNumber;
+    private String email;
+    private String company;
 
-    public personData(){}
+    public PersonData(){}
 
-    public personData(String name, String subName, String phoneNumber, String email,String company){
+    public PersonData(String name, String subName, String phoneNumber, String email, String company){
         this.name = name;
         this.subName = subName;
         this.phoneNumber = phoneNumber;
@@ -59,4 +59,5 @@ public class personData implements Serializable {
     public void setCompany(String company) {
         this.company = company;
     }
+
 }

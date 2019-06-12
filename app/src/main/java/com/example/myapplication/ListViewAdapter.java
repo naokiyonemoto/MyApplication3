@@ -31,9 +31,9 @@ public class ListViewAdapter extends ArrayAdapter<PersonData> {
         }
         PersonData items = getItem(position);
 
-        holder.textName.setText(items.name);
-        holder.textSubName.setText(items.subName);
-        holder.textPhoneNumber.setText(items.phoneNumber);
+        holder.textName.setText(items.getName());
+        holder.textSubName.setText(items.getSubName());
+        holder.textPhoneNumber.setText(items.getPhoneNumber());
 
         return convertView;
     }

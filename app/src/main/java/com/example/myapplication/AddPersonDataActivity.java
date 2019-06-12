@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class AddPersonDataActivity extends AppCompatActivity {
 
-    PersonData data = new PersonData();
+
     private EditText editName;
     private EditText editSubName;
     private EditText editPhoneNumber;
@@ -53,28 +53,13 @@ public class AddPersonDataActivity extends AppCompatActivity {
     }
 
     private void save() {
-        //TODO：ファイルに保存したい
+        //TODO：DBに保存したい
         Log.d("EnterNameLog", editName.getText().toString());
         Log.d("EnterSubNameLog", editSubName.getText().toString());
 
         DatabaseHelper helper = new DatabaseHelper(AddPersonDataActivity.this);
         SQLiteDatabase db = helper.getWritableDatabase();
 
-//        data.setName(editName.getText().toString());
-//        data.setSubName(editSubName.getText().toString());
-//        data.setPhoneNumber(editPhoneNumber.getText().toString());
-//        data.setEmail(editEmail.getText().toString());
-//        data.setCompany(editCompany.getText().toString());
-//
-//
-//        Log.d("add:data.name", data.getName());
-//        DataUtil.save(AddPersonDataActivity.this, data);
-//
-//
-//        //test
-//        ArrayList<PersonData> dataArrayList = new ArrayList<>();
-//        dataArrayList.add(data);
-//        Log.d("dataArrayList", Integer.toString(dataArrayList.size()));
         //TODO：登録しました的なダイアログを出したい
         //アラートダイアログを使う
         finish();

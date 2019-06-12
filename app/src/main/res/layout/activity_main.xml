@@ -21,7 +21,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorPrimary"
+                android:background="?attr/colorControlActivated"
                 app:popupTheme="@style/Base.ThemeOverlay.AppCompat.ActionBar" />
 
         </android.support.design.widget.AppBarLayout>
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            android:background="@color/colorPrimary"
+            android:background="?attr/colorControlActivated"
             app:menu="@menu/bottom_navigate_item" />
 
     </LinearLayout>

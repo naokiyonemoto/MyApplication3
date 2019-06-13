@@ -18,16 +18,14 @@ public class UpdatePersonDataActivity extends AppCompatActivity {
     private EditText editEmail;
     private EditText editCompany;
 
-    //更新の処理ができてない
+    //更新の処理
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_updata_persondata);
-
         //
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
 
         Intent intent = getIntent();
         String selectedName = intent.getStringExtra("name");

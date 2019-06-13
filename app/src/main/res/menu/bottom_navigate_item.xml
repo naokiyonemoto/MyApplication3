@@ -5,10 +5,6 @@
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/bottom_nav_add" />
     <item
-        android:id="@+id/action_delete"
-        android:icon="@android:drawable/ic_menu_delete"
-        android:title="@string/bottom_nav_delete" />
-    <item
         android:id="@+id/action_call"
         android:icon="@android:drawable/ic_menu_call"
         android:title="@string/bottom_nav_call" />

@@ -6,7 +6,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-
     private static final String TABLE_NAME = "person_data";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_NAME = "name";
@@ -14,8 +13,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PHONE_NUMBER = "phone_number";
     private static final String COLUMN_EMAIL = "email";
     private static final String COLUMN_COMPANY = "company";
-
-    //PersonDataを保持しているDB
     private static final String DATABASE_NAME = "pesondata.db";
     private static final int DATABASE_VERSION = 1;
 
@@ -37,15 +34,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sb.append(");");
         String sql = sb.toString();
         db.execSQL(sql);
-
-//        //サンプルデータ
-//        ContentValues values = new ContentValues();
-//        values.put("name", "米本1");
-//        values.put("sub_name", "よねもと1");
-//        values.put("phone_number", "00011112222");
-//        values.put("email", "test1@mail");
-//        values.put("company", "nus");
-//        db.insert("person_data", null, values);
 
     }
 

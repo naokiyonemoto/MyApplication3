@@ -12,7 +12,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddPersonDataActivity extends AppCompatActivity {
-
+    //連絡先の追加
+    //TODO:名前と電話番号は確実に入れさせるように（空の禁止）
 
     private EditText editName;
     private EditText editSubName;
@@ -23,7 +24,7 @@ public class AddPersonDataActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_persondata);
+        setContentView(R.layout.activity_add_person);
 
         editName = findViewById(R.id.edit_name);
         editSubName = findViewById(R.id.edit_name_sub);
@@ -32,7 +33,7 @@ public class AddPersonDataActivity extends AppCompatActivity {
         editCompany = findViewById(R.id.edit_company);
 
 
-        findViewById(R.id.button_updata).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_update).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 save();
@@ -79,37 +80,17 @@ public class AddPersonDataActivity extends AppCompatActivity {
 
             db.setTransactionSuccessful();
             Toast.makeText(this, "登録に成功しました", Toast.LENGTH_SHORT).show();
-        }catch (Exception e){
-            //エラー時
+        } catch (Exception e) {
             Toast.makeText(this, "登録に失敗しました", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
-        }finally {
-            if(db != null){
+        } finally {
+            if (db != null) {
                 db.endTransaction();
                 db.close();
             }
         }
-//        ContentValues values = new ContentValues();
-//        values.put("name", editName.getText().toString());
-//        values.put("sub_name", editSubName.getText().toString());
-//        values.put("phone_number", editPhoneNumber.getText().toString());
-//        values.put("email", editEmail.getText().toString());
-//        values.put("company", editCompany.getText().toString());
-//        long ret;
-//        try{
-//            ret = db.insert("person_data", null, values);
-//        }finally {
-//            db.close();
-//        }
 
-//            if (ret == -1) {
-//                Toast.makeText(this, "登録に失敗しました", Toast.LENGTH_SHORT).show();
-//            } else {
-//                Toast.makeText(this, "登録に成功しました", Toast.LENGTH_SHORT).show();
-//            }
-
-            Log.d("addDB", "insert column");
-            finish();
-        }
-
+        finish();
     }
+
+}

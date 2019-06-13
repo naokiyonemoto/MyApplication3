@@ -4,11 +4,18 @@
     <string name="text_name">名前</string>
     <string name="text_number">番号</string>
     <string name="text_mail">メールアドレス</string>
-    <string name="button_update">新しい連絡先を更新する</string>
+    <string name="button_update">新しい連絡先に更新する</string>
     <string name="text_company">会社名</string>
     <string name="text_name_sub">ふりがな</string>
     <string name="button_create">新しい連絡先を追加する</string>
     <string name="bottom_nav_add">add</string>
     <string name="bottom_nav_delete">delete</string>
     <string name="bottom_nav_call">call</string>
+    <string name="button_delete">この連絡先を削除する</string>
+    <string name="text_add_caution">※の項目は必ず入力してください</string>
+    <string name="delete_dialog_title">削除の確認</string>
+    <string name="delete_dialog_message">この連絡先を削除しますか？</string>
+    <string name="delete_dialog_ok">OK</string>
+    <string name="delete_dialog_cancel">キャンセル</string>
+    <string name="delete_dialog_ok_toast">削除しました</string>
 </resources>

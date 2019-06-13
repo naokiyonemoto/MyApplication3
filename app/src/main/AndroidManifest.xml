@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddPersonDataActivity"></activity>
-        <activity android:name=".UpdatePersonDataActivity"></activity>
+        <activity android:name=".UpdateAndDeletePersonDataActivity"></activity>
     </application>
 
 </manifest>

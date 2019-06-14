@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //table
         StringBuilder sb = new StringBuilder();
-        sb.append("CREATE TABLE "+ TABLE_NAME + " (");
+        sb.append("CREATE TABLE " + TABLE_NAME + " (");
         sb.append(COLUMN_ID + " INTEGER PRIMARY KEY,");
         sb.append(COLUMN_NAME + " TEXT, ");
         sb.append(COLUMN_SUB_NAME + " TEXT, ");

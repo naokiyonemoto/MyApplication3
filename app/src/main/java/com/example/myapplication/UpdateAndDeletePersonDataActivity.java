@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -11,7 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
+public class UpdateAndDeletePersonDataActivity extends AppCompatActivity implements DeleteDialogFragment.FragmentResultListener {
     //個別連絡先画面の内容の変更と削除
 
     private EditText editName;
@@ -48,7 +49,7 @@ public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
         editEmail.setText(selectedEmail);
         editCompany.setText(selectedCompany);
 
-        findViewById(R.id.button_update).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.button_add).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //更新ボタンの処理
@@ -60,9 +61,9 @@ public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //削除ボタンの処理
-                DeleteDialogFragment deleteDialogFragment = new DeleteDialogFragment();
+                DeleteDialogFragment deleteDialogFragment = DeleteDialogFragment.newInstance(UpdateAndDeletePersonDataActivity.this);
                 deleteDialogFragment.show(getSupportFragmentManager(), "DeleteDialogFragment");
-                delete();
+
             }
         });
 
@@ -76,6 +77,11 @@ public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentResult() {
+        delete();
     }
 
     private void update() {
@@ -120,7 +126,6 @@ public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
     private void delete() {
         //TODO:削除確認ダイアログを追加する
 
-
         DatabaseHelper helper = new DatabaseHelper(UpdateAndDeletePersonDataActivity.this);
         SQLiteDatabase db = null;
 
@@ -134,9 +139,9 @@ public class UpdateAndDeletePersonDataActivity extends AppCompatActivity {
 
             db.setTransactionSuccessful();
 
-//          Toast.makeText(UpdateAndDeletePersonDataActivity.this, "削除しました", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UpdateAndDeletePersonDataActivity.this, "削除しました", Toast.LENGTH_SHORT).show();
             finish();
-        } catch (Exception e) {
+        } catch (SQLiteException e) {
             Toast.makeText(UpdateAndDeletePersonDataActivity.this, "削除に失敗しました", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         } finally {

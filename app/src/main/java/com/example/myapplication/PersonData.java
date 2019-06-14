@@ -11,9 +11,10 @@ public class PersonData implements Serializable {
     private String email;
     private String company;
 
-    public PersonData(){}
+    public PersonData() {
+    }
 
-    public PersonData(String name, String subName, String phoneNumber, String email, String company){
+    public PersonData(String name, String subName, String phoneNumber, String email, String company) {
         this.name = name;
         this.subName = subName;
         this.phoneNumber = phoneNumber;
